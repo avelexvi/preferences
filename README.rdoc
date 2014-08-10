@@ -1,32 +1,10 @@
-== preferences http://travis-ci.org/pluginaweek/preferences.png
+== preferences
 
 +preferences+ adds support for easily creating custom preferences for models.
 
 == Resources
 
-API
-
-* http://rdoc.info/github/pluginaweek/preferences/master/frames
-
-Bugs
-
-* http://github.com/pluginaweek/preferences/issues
-
-Development
-
-* http://github.com/pluginaweek/preferences
-
-Testing
-
-* http://travis-ci.org/pluginaweek/preferences
-
-Source
-
-* git://github.com/pluginaweek/preferences.git
-
-Mailing List
-
-* http://groups.google.com/group/pluginaweek-talk
+Forked from: git://github.com/pluginaweek/preferences.git
 
 == Description
 
@@ -50,10 +28,12 @@ a separate table and making it dead-simple to define and manage preferences.
 
 === Installation
 
+gem 'preferences', :git => 'git://github.com/avelexvi/preferences-rails-4.git'
+
 +preferences+ requires an additional database table to work.  You can generate
 a migration for this table like so:
 
-  script/generate preferences
+  rails g preferences
 
 Then simply migrate your database:
 
@@ -209,16 +189,3 @@ Assigning the same value leaves the preference unchanged:
   user.preferred_language = 'English'
   user.preferred_language_changed?      # => false
   user.preferred_language_change        # => nil
-
-== Testing
-
-Before you can run any tests, the following gem must be installed:
-* plugin_test_helper[http://github.com/pluginaweek/plugin_test_helper]
-
-To run against a specific version of Rails:
-
-  rake test RAILS_FRAMEWORK_ROOT=/path/to/rails
-
-== Dependencies
-
-* 0.5.0 for Rails 3 (0.4.x and below for Rails 2)
