@@ -28,7 +28,7 @@ a separate table and making it dead-simple to define and manage preferences.
 
 === Installation
 
-gem 'preferences', :git => 'git://github.com/avelexvi/preferences-rails-4.git'
+  gem 'preferences', :git => 'git://github.com/avelexvi/preferences-rails-4.git'
 
 +preferences+ requires an additional database table to work.  You can generate
 a migration for this table like so:
